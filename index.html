@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container head-logo">
-  <h4>logo here</h4>
+    <h4>logo here</h4>
 </div>
 <div class="container">
     <div class="row">
@@ -34,11 +34,10 @@
 
 </div> <!-- end container -->
 <div class="container">
-    <section class="row">
-
-        <h1>Routing</h1>
-            <h4>EIGRP Configs</h4>
-
+    <h1>Routing</h1>
+</div>
+<div class="container">
+    <h2>EIGRP <small>Configs</small></h2>
 <pre class="eigrp">
 DarcikRouter>enable
 DarcikRouter# configure terminal
@@ -46,12 +45,14 @@ DarcikRouter(config)# router eigrp 1
 DarcikRouter(config-router)#network 192.168.1.0 255.255.255.0
 DarcikRouter(config-router)#router-id 1.1.1.1
 </pre>
-    </section>
+
 </div>
 
 
 <div class="container">
-    <h2>OSFP<small> configs</small></h2>
+    <h2>OSFP
+        <small> configs</small>
+    </h2>
 <pre class="ospf">
 DarcikRouter>enable
 DarcikRouter#configure terminal
@@ -62,7 +63,9 @@ DarcikRouter(config-router)#router-id 1.1.1.
 
 </div>
 <div class="container">
-    <h2>Basico router <small>configs</small></h2>
+    <h2>Basic router
+        <small>configs</small>
+    </h2>
 
 <pre class="basic-config">
 Router#config terminal
@@ -85,6 +88,30 @@ dk-router(config-line)#login
 dk-router(config-line)#exit
 dk-router(config)#
 
+</pre>
+</div>
+
+<div class="container">
+    <h2>SSH <small>configuration</small></h2>
+<pre class="ssh">
+dk-router(config)#ip domain-name mylab.com
+!
+dk-router(config)#crypto key generate rsa
+The name for the keys will be: dk-router.darci.com
+Choose the size of the key modulus in the range of 360 to 2048 for your
+General Purpose Keys. Choosing a key modulus greater than 512 may take
+a few minutes.
+
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+!
+dk-router(config)#ip ssh version 2
+dk-router(config)# line vty 0 4
+dk-router(config-line)# login local
+dk-router(config-line)# transport input ssh
+dk-router(config-line)# exit
+!
+dk-router(config)#username admin priviledge 15 password cisco
 </pre>
 </div>
 
