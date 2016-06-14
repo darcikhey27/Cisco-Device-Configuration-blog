@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Darci Cisco blog</title>
+</head>
+<body>
+<div class="container head-logo">
+  <h4>logo here</h4>
+</div>
+<div class="container">
+    <div class="row">
+
+        <header class="col-md-4">
+            <h2>Router</h2>
+            <img src="img/R1.jpg" alt="Cisco Router">
+            <!--<button class="btn btn-success">Config terminal</button>-->
+        </header>
+        <section class="col-md-4">
+            <h3>Switch</h3>
+            <img src="img/SW1.jpg" alt="Cisco switch">
+            <!--<button class="btn btn-secondary">Config terminal</button>-->
+        </section>
+        <section class="col-md-4">
+            <!--<button class="btn btn-danger-outline">Config terminal</button>-->
+            <h3>Cisco ASA 550X</h3>
+            <img src="img/ASA.jpg" alt="Cisco Firewall">
+        </section>
+    </div> <!-- end row -->
+
+</div> <!-- end container -->
+<div class="container">
+    <section class="row">
+
+        <h1>Routing</h1>
+            <h4>EIGRP Configs</h4>
+
+<pre class="eigrp">
+DarcikRouter>enable
+DarcikRouter# configure terminal
+DarcikRouter(config)# router eigrp 1
+DarcikRouter(config-router)#network 192.168.1.0 255.255.255.0
+DarcikRouter(config-router)#router-id 1.1.1.1
+</pre>
+    </section>
+</div>
+
+
+<div class="container">
+    <h2>OSFP<small> configs</small></h2>
+<pre class="ospf">
+DarcikRouter>enable
+DarcikRouter#configure terminal
+DarcikRouter(config)#router ospf 1
+DarcikRouter(config-router)#network 192.168.1.0 255.255.255.0
+DarcikRouter(config-router)#router-id 1.1.1.
+</pre>
+
+</div>
+<div class="container">
+    <h2>Basico router <small>configs</small></h2>
+
+<pre class="basic-config">
+Router#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname dk-router
+dk-router(config)#interface Gigabit0/0
+dk-router(config-if)#ip address 192.168.0.1 255.255.255.0
+dk-router(config-if)#no shutdown
+dk-router(config-if)#exit
+dk-router(config)#line console 0
+dk-router(config-line)#password cisco
+dk-router(config-line)#login
+dk-router(config-line)#line vty 0 15
+dk-router(config-line)#password cisco
+dk-router(config-line)#login
+dk-router(config-line)#exit
+dk-router(config)#
+
+</pre>
+</div>
+
+
+<script href="js/jquery-3.0.0.min.js"></script>
+<script href="js/bootstrap.min.js"></script>
+<script href="js/script.js"></script>
+</body>
+</html>
