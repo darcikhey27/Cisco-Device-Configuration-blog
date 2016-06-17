@@ -10,7 +10,20 @@
 </head>
 <body>
 <div class="container head-logo">
-    <h4>logo here</h4>
+    <div class="row">
+        <div class="col-md-2">
+            <h2>logo here</h2>
+        </div>
+        <div class="col-md-10">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-success-outline">Routing</button>
+                <button type="button" class="btn btn-success-outline">Switching</button>
+                <button type="button" class="btn btn-success-outline">Firewall</button>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 <div class="container">
     <div class="row">
@@ -37,7 +50,9 @@
     <h1>Routing</h1>
 </div>
 <div class="container">
-    <h2>EIGRP <small>Configs</small></h2>
+    <h2>EIGRP
+        <small>Configs</small>
+    </h2>
 <pre class="eigrp">
 DarcikRouter>enable
 DarcikRouter# configure terminal
@@ -92,7 +107,9 @@ dk-router(config)#
 </div>
 
 <div class="container">
-    <h2>SSH <small>configuration</small></h2>
+    <h2>SSH
+        <small>configuration</small>
+    </h2>
 <pre class="ssh">
 dk-router(config)#ip domain-name mylab.com
 !
