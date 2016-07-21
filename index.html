@@ -10,7 +10,14 @@
 </head>
 <body>
 <div class="container head-logo">
-    <h4>logo here</h4>
+
+    <div class="col-md-3">
+        <h4>logo here</h4>
+    </div>
+    <div class="col-md-9">
+        <h3>nava here</h3>
+    </div>
+
 </div>
 <div class="container">
     <div class="row">
@@ -70,18 +77,18 @@ DarcikRouter(config-router)#router-id 1.1.1.
 <pre class="basic-config">
 Router#config terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
-    !! configure a hostname
+!! configure a hostname
 Router(config)#hostname dk-router
-    !! set up an interface for management
+!! set up an interface for management
 dk-router(config)#interface Gigabit0/0
 dk-router(config-if)#ip address 192.168.0.1 255.255.255.0
 dk-router(config-if)#no shutdown
 dk-router(config-if)#exit
-    !! enable a console password
+!! enable a console password
 dk-router(config)#line console 0
 dk-router(config-line)#password cisco
 dk-router(config-line)#login
-    !! enable telnet access
+!! enable telnet access
 dk-router(config-line)#line vty 0 15
 dk-router(config-line)#password cisco
 dk-router(config-line)#login
