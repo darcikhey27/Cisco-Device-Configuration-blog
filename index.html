@@ -34,9 +34,11 @@
     <div class="col-md-12">
         <h2 class="h2">Router</h2>
         <ul class="nav nav-tabs">
-            <li><a href="#eigrp">Basic Router config</a></li>
-            <li><a href="#">Ip services</a></li>
+            <li><a href="#">Basic Router config</a></li>
+            <li><a href="#routing">Routing</a></li>
+            <li><a href="#">IP services</a></li>
             <li><a href="#">Router Security</a></li>
+            <li><a href="#">Router management</a></li>
         </ul>
     </div>
 
@@ -64,14 +66,17 @@
 
 </div> <!-- end container -->
 <div class="container">
-    <h1>Routing</h1>
-</div>
-<div class="container" id="eigrp">
+    <h1 id="routing">Routing</h1>
+    <ul class="nav nav-tabs">
+        <li><a href="#eigrp">EIGRP</a></li>
+        <li><a href="#ospf">OSPF</a></li>
+        <li><a href="#">Static Routing</a></li>
+    </ul>
 
     <h2>EIGRP
         <small>Configs</small>
     </h2>
-<pre class="eigrp">
+<pre class="eigrp" id="eigrp">
 DarcikRouter>enable
 DarcikRouter# configure terminal
 DarcikRouter(config)# router eigrp 1
@@ -83,9 +88,7 @@ DarcikRouter(config-router)#router-id 1.1.1.1
 
 
 <div class="container">
-    <h2>OSFP
-        <small> configs</small>
-    </h2>
+    <h2 id="ospf">OSFP</h2>
 <pre class="ospf">
 DarcikRouter>enable
 DarcikRouter#configure terminal
@@ -122,6 +125,55 @@ dk-router(config-line)#exit
 dk-router(config)#
 
 </pre>
+</div>
+
+<div class="container">
+    <table class="table table-responsive ">
+        <thead>
+        <!--<tr>-->
+            <!--<th>#</th>-->
+            <!--<th>First Name</th>-->
+            <!--<th>Last Name</th>-->
+            <!--<th>Username</th>-->
+        <!--</tr>-->
+        </thead>
+        <tbody class="basic-config">
+        <tr>
+            <th scope="row"></th>
+            <td>Router(config)#Enable password cisco</td>
+            <td>Sets the enable password</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>Router(config)#Enable secret class</td>
+            <td>Sets the enable secret</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>Router(config)#line con</td>
+            <td>Enters console-line mode </td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>Router(config)#password mypass</td>
+            <td>Sets console password to <strong>mypass</strong></td>
+
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>Router(config)#login</td>
+            <td>Enables password checking at login </td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>Router (config)#line vty 0 4 </td>
+            <td>Enters vty line mode for all five vty lines</td>
+        </tr>
+
+
+
+        </tbody>
+    </table>
 </div>
 
 <div class="container">
