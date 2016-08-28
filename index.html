@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>Darci Cisco blog</title>
 </head>
@@ -13,10 +15,31 @@
 
     <div class="col-md-3">
         <h4>logo here</h4>
+
     </div>
+
     <div class="col-md-9">
-        <h3>nava here</h3>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Router</a></li>
+            <li role="presentation"><a href="#">Switch</a></li>
+            <li role="presentation"><a href="#">ASA Firewall</a></li>
+        </ul>
+
     </div>
+
+
+</div>
+<div class="container router">
+    <!--add another nav for router stuff-->
+    <div class="col-md-12">
+        <h2 class="h2">Router</h2>
+        <ul class="nav nav-tabs">
+            <li><a href="#eigrp">Basic Router config</a></li>
+            <li><a href="#">Ip services</a></li>
+            <li><a href="#">Router Security</a></li>
+        </ul>
+    </div>
+
 
 </div>
 <div class="container">
@@ -24,18 +47,18 @@
 
         <header class="col-md-4">
             <h2>Router</h2>
-            <img src="img/R1.jpg" alt="Cisco Router">
+            <p>router image here</p>
             <!--<button class="btn btn-success">Config terminal</button>-->
         </header>
         <section class="col-md-4">
             <h3>Switch</h3>
-            <img src="img/SW1.jpg" alt="Cisco switch">
+            <p>switch image here</p>
             <!--<button class="btn btn-secondary">Config terminal</button>-->
         </section>
         <section class="col-md-4">
             <!--<button class="btn btn-danger-outline">Config terminal</button>-->
             <h3>Cisco ASA 550X</h3>
-            <img src="img/ASA.jpg" alt="Cisco Firewall">
+            <p>ASA firewall img here</p>
         </section>
     </div> <!-- end row -->
 
@@ -43,8 +66,11 @@
 <div class="container">
     <h1>Routing</h1>
 </div>
-<div class="container">
-    <h2>EIGRP <small>Configs</small></h2>
+<div class="container" id="eigrp">
+
+    <h2>EIGRP
+        <small>Configs</small>
+    </h2>
 <pre class="eigrp">
 DarcikRouter>enable
 DarcikRouter# configure terminal
@@ -99,7 +125,9 @@ dk-router(config)#
 </div>
 
 <div class="container">
-    <h2>SSH <small>configuration</small></h2>
+    <h2>SSH
+        <small>configuration</small>
+    </h2>
 <pre class="ssh">
 dk-router(config)#ip domain-name mylab.com
 !
